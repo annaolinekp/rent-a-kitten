@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+gem 'faker'
 gem 'pundit'
 gem 'bootsnap', require: false
 gem 'devise'
