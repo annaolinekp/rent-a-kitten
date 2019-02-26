@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_kitten, only: [:show, :destroy, :edit, :update]
+  before_action :find_user, only: [:show, :destroy, :edit, :update]
 
   def show
   end
@@ -10,11 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    if @user.save
-      redirect_to user_path(@user)
-    else
-      render 'new'
-    end
+    @user.save ? (redirect_to user_path(@user)) : (render 'new')
   end
 
   def edit
