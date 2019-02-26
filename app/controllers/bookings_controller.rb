@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @kitten = Kitten.find(params[:kitten_id])
     @booking = Booking.create(booking_params)
     @booking.kitten = Kitten.find(params[:kitten_id])
     @booking.user = current_user

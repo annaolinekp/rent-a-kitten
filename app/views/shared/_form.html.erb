@@ -1,0 +1,7 @@
+<%= simple_form_for [@kitten, @booking] do |f| %>
+  <%= f.input :date, as: :date, start_year: Date.today.year,
+                              end_year: Date.today.year + 1,
+
+                              order: [:day, :month, :year] %>
+  <%= f.submit 'Book'%>
+<% end %>
