@@ -8,9 +8,12 @@ class KittensController < ApplicationController
   def create
   end
   def edit
+    authorize @kitten
   end
   def update
+    authorize @kitten
   end
   def destroy
+    authorize @kitten
   end
 end
