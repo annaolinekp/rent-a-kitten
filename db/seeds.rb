@@ -8,9 +8,12 @@
 
 require 'faker'
 
+Booking.destroy_all
+Kitten.destroy_all
+User.destroy_all
 
-puts 'Creating 10 fake users...'
-10.times do
+puts 'Creating 12 fake users...'
+12.times do
   user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,

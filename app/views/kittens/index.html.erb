@@ -1,9 +1,12 @@
 <div class="main-container">
-  <h1>Kitten index</h1>
-  <div class="kitten-container">
+  <div class="card-container">
     <% @kittens.each do |kitten| %>
     <div class="kitten-card">
-      <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
+      <div class="kitten-info-card">
+        <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
+        <p> <%= kitten.description %></p>
+        <p> <%= kitten.location %></p>
+      </div>
     </div>
     <% end %>
   </div>

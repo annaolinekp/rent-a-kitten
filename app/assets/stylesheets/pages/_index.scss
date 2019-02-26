@@ -1,2 +1,37 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 60px;
+  width: 100%;
+}
+
+.kitten-card {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 16px;
+  width: 250px;
+  margin: 20px;
+  box-shadow: 4px 2px 41px -9px rgba(171,168,171,0.86);
+  border-radius: 4px;
+}
+
+.kitten-info-card {
+}
+
+h1 {
+  font-weight: bolder;
+  font-color: #FF824D;
+}
+
+a {
+  color: #FF824D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF824D;
+}
