@@ -1,12 +1,15 @@
 class BookingsController < ApplicationController
   def new
+    @kitten = Kitten.find(params[:kitten_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.create(booking_params)
+    @booking.kitten = Kitten.find(params[:kitten_id])
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to kitten_path(@kitten)
     else
       render 'new'
     end
