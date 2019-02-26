@@ -1,9 +1,8 @@
 class KittensController < ApplicationController
-  before_action :if_user_owner?, only: [:edit, :update, :destroy]
   before_action :find_kitten, only: [:show, :destroy, :edit, :update]
 
   def index
-    @kittens = policy_scope(Kitten)
+    @kittens = Kitten.all
   end
 
   def show
@@ -38,11 +37,7 @@ class KittensController < ApplicationController
   private
 
   def kitten_params
-    params.require(:kitten).permit(:name, :description, :photo)
-  end
-
-  def if_user_owner?
-    authorize @kitten
+    params.require(:kitten).permit(:name, :description)
   end
 
   def find_kitten
