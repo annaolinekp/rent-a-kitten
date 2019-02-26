@@ -1,8 +1,7 @@
-<%= simple_form_for[@booking, @kitten] do |f| %>
-  <%= f.input :date, as: :date, start_year: Date.today.year - 90,
-                              end_year: Date.today.year - 12, discard_day: true,
-                              order: [:month, :year] %>
-  <%= f.input :accepts, as: :boolean, checked_value: true, unchecked_value: false %>
-  <%= f.association :user %>
-  <%= f.submit %>
+<%= simple_form_for [@kitten, @booking] do |f| %>
+  <%= f.input :date, as: :date, start_year: Date.today.year,
+                              end_year: Date.today.year + 1,
+
+                              order: [:day, :month, :year] %>
+  <%= f.submit 'Book'%>
 <% end %>
