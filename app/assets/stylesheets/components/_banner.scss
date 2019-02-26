@@ -1,0 +1,12 @@
+.banner {
+  background-image: asset-url('cat-home.jpg');
+  // background-image: url("./images/cat-home");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  h1 {
+    padding: 60px;
+    color: white;
+  }
+
+}
