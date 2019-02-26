@@ -1,2 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 60px;
+  width: 100%;
+}
+
+.kitten-card {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  // flex: 1 0 21%;
+  margin: 50px;
+  height: 100px;
+  width: 150px;
+}
+
+.kitten-info-card {
+
+}
+
