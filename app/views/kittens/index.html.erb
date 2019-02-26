@@ -1,0 +1,10 @@
+<div class="main-container">
+  <h1>Kitten index</h1>
+  <div class="kitten-container">
+    <% @kittens.each do |kitten| %>
+    <div class="kitten-card">
+      <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
+    </div>
+    <% end %>
+  </div>
+</div>
