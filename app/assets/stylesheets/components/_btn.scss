@@ -1,7 +1,20 @@
 
-btn-light {
-  padding: 8px;
+.btn-light {
   background-color: $orange-ligth;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  &:hover {
+     background-color: $orange-ligth;
+     text-decoration: none;
+  }
+}
+
+.btn {
+  padding: 8px 16px;
+  color: white;
   border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: $orange-logo;
 }
