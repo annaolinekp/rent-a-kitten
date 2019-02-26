@@ -1,25 +1,27 @@
-<%= simple_form_for [@kitten, @booking] do |f| %>
-  <%= f.input :date, as: :date, start_year: Date.today.year,
-                              end_year: Date.today.year + 1,
+<body>
+  <div class="container padding-top">
+    <div class="row">
+      <div class="col-12 col-lg-8">
 
-                              order: [:day, :month, :year] %>
-  <%= f.submit 'Book'%>
-<% end %>
+        <div class="p-3">
+          <h1> Say 'meow' (hello) to <%=@kitten.name %></h1>
+          <img src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="cute-kitten">
+        </div>
 
-<%= render 'bookings/form' %>
+        <h3>About me: </h3> I'm: <%=@kitten.description%>
+        <br>
+        <h4>Where to find me:</h4> <%=@kitten.location %>
+        <br>
+        <br>
+        <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path%></p>
+      </div>
 
-<div>
-  <div class="container">
-    <h1> Say 'meow' (hello) to <%=@kitten.name %></h1>
 
-    <div>
-      <img src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="cute-kitten">
+      <div class="col-12 col-lg-4">
+        <p>Pick a date and book me</p>
+        <%= render 'bookings/form' %>
+      </div>
     </div>
-
-
-      <h3>About me: <%=@kitten.description%></h3>
-      <h3>Where to find me: <%=@kitten.location %></h3>
-      <p> <class= center-text><%= link_to "View all kittens <3", kittens_path%></p>
-
   </div>
-</div>
+</body>
+
