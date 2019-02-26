@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <%= link_to "#", class: "navbar-brand" do %>
-     <%= image_tag "logo1.png"%>
+     <%= image_tag "logo1.png", class: "big-logo"%>
      <%= image_tag "logo2.png" %>
   <% end %>
 
@@ -12,7 +12,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <p><%= link_to "Share your Kitten", "#", class: "nav-link" %></p>
+        <%= link_to "Share your Kitten", "#", class: "navbar-link" %>
       </li>
      <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
