@@ -12,14 +12,26 @@
 .kitten-card {
   display: inline-block;
   vertical-align: top;
-  white-space: normal;
-  // flex: 1 0 21%;
-  margin: 50px;
-  height: 100px;
-  width: 150px;
+  padding: 2px 16px;
+  width: 250px;
+  margin: 20px;
+  box-shadow: 4px 2px 41px -9px rgba(171,168,171,0.86);
+  border-radius: 4px;
 }
 
 .kitten-info-card {
-
 }
 
+h1 {
+  font-weight: bolder;
+  font-color: #FF824D;
+}
+
+a {
+  color: #FF824D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF824D;
+}
