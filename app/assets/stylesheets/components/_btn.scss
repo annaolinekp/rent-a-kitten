@@ -1,13 +1,12 @@
 
-.btn-light {
+.btn-light-orange {
   background-color: $orange-ligth;
   &:hover {
-     background-color: $orange-ligth;
      text-decoration: none;
   }
 }
 
-.btn {
+.button {
   padding: 16px 24px;
   color: white;
   border-radius: 8px;
