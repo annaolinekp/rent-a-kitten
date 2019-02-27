@@ -35,7 +35,7 @@ end
 
 kitten = Kitten.new(
   name: 'Galileo',
-  description: 'Main Coon',
+  description: 'Maine Coon',
   location: 'London',
   user: User.first
 )
