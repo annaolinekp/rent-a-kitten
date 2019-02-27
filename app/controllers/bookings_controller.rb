@@ -5,16 +5,21 @@ class BookingsController < ApplicationController
   end
 
   def index
-    # @booking = Booking.where(user: current_user)
+    @bookings = Booking.where(user: current_user)
+  end
+
+  def show
+    @booking = Booking.find_by(user: current_user)
+    @kitten = @booking.kitten
   end
 
   def create
     @kitten = Kitten.find(params[:kitten_id])
     @booking = Booking.create(booking_params)
-    @booking.kitten = Kitten.find(params[:kitten_id])
+    @booking.kitten = @kitten
     @booking.user = current_user
     if @booking.save
-      redirect_to kitten_path(@kitten), notice: 'Booking has been made!'
+      redirect_to booking_path(@booking)
     else
       render 'new'
     end
