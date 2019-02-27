@@ -1,25 +1,25 @@
-h1{
+h1 {
  color:#ffa783;
 }
 
-h3{
+h3 {
  color:#ffa783;
 }
 
-h4{
+h4 {
  color:#ffa783;
 }
 
-p{
+p {
   color: #ffa783;
 }
 
-img{
+img {
  width:500px;
  border-radius:2px;
 }
 
-body{
+body {
  background-color:white;
 }
 
@@ -32,12 +32,23 @@ border-color:#ffa783;
 
 }
 
-.form-container-height{
-  height:200px;
 
-}
 .border {
 
   border-color:#ffa783;
+}
 
+.margin-show {
+  margin:20px;
+}
+
+.flex-box-show{
+display: flex;
+justify-content: space-between;
+
+}
+
+.price-item{
+  color:#ffa783;
+  font-size: 50px;
 }
