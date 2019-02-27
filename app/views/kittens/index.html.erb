@@ -2,6 +2,7 @@
   <div class="card-container">
     <% @kittens.each do |kitten| %>
     <div class="kitten-card">
+      <img src="https://res.cloudinary.com/do6brpyuo/image/upload/v1551217624/dandrew-photography-1156894-unsplash.jpg" alt="">
       <div class="kitten-info-card">
         <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
         <p> <%= kitten.description %></p>
