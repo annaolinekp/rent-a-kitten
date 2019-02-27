@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.kitten = Kitten.find(params[:kitten_id])
     @booking.user = current_user
     if @booking.save
-      redirect_to kitten_path(@kitten)
+      redirect_to kitten_path(@kitten), notice: 'Booking has been made!'
     else
       render 'new'
     end
