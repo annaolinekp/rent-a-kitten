@@ -6,7 +6,7 @@
         <%= f.input :date, as: :date, start_year: Date.today.year,
                                     end_year: Date.today.year + 1,
                                     order: [:day, :month, :year] %>
-       <div class="text-center"> <%= f.submit 'Book'%> </div>
+       <div class="text-center "> <%= f.submit 'Book', class: "button btn-light-orange" %> </div>
       <% end %>
     </div>
 
