@@ -13,7 +13,7 @@ Kitten.destroy_all
 User.destroy_all
 
 puts 'Creating 12 fake users...'
-12.times do
+11.times do
   user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -32,4 +32,13 @@ puts 'Creating 12 fake users...'
     kitten.save!
 
 end
+
+kitten = Kitten.new(
+  name: 'Galileo',
+  description: 'Main Coon',
+  location: 'London',
+  user: User.first
+)
+kitten.save!
+
 puts 'Finished!'
