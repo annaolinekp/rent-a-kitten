@@ -43,6 +43,12 @@ border-color:#ffa783;
 }
 
 .flex-box-show{
+display: flex;
+justify-content: space-between;
 
+}
 
+.price-item{
+  color:#ffa783;
+  font-size: 50px;
 }
