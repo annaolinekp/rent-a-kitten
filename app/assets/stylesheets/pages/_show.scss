@@ -15,8 +15,9 @@ p {
 }
 
 img {
- width:500px;
- border-radius:2px;
+ width:400px;
+ border-radius:4px;
+
 }
 
 body {
@@ -44,6 +45,8 @@ border-color:#ffa783;
 .flex-box-show{
 display: flex;
 justify-content: space-between;
+align-items: flex-end;
+
 
 }
 
@@ -52,3 +55,7 @@ justify-content: space-between;
   font-size: 50px;
 }
 
+.font-size {
+  font-size: 10px;
+  color:black;
+}
