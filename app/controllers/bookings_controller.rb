@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def index
+    # @booking = Booking.where(user: current_user)
+  end
+
   def create
     @kitten = Kitten.find(params[:kitten_id])
     @booking = Booking.create(booking_params)
