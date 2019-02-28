@@ -7,7 +7,7 @@
     <div class="card-container">
       <% @kittens.each do |kitten| %>
         <div class="kitten-card">
-          <%= cl_image_tag @kitten.photo %>
+          <%= cl_image_tag kitten.photo %>
             <div class="kitten-info-card">
               <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
               <p><i class="fas fa-cat"></i> <%= kitten.description%></p>
