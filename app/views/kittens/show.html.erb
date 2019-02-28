@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-lg-8 p-3">
           <h1> Say 'meow' to <%=@kitten.name %></h1>
-          <%=@kitten.photo %>
+          <%=cl_image_tag @kitten.photo, height: 200, width: 300, crop: :fill %>
           <br>
           <br>
             <h3>About me: </h3> I'm a: <%=@kitten.description%>
