@@ -7,7 +7,7 @@
     <div class="card-container">
       <% @kittens.each do |kitten| %>
         <div class="kitten-card">
-          <img src="https://res.cloudinary.com/do6brpyuo/image/upload/v1551217610/galileo.png">
+          <%= cl_image_tag @kitten.photo %>
             <div class="kitten-info-card">
               <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
               <p><i class="fas fa-cat"></i> <%= kitten.description%></p>
@@ -21,7 +21,7 @@
     <div
       id="map"
       style="width: 300px;
-      height: 600px;"
+      height: 400px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     >
