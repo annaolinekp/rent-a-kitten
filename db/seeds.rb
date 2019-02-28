@@ -9,7 +9,6 @@
 
 require 'faker'
 
- # Booking.destroy_all
 User.destroy_all
 
 

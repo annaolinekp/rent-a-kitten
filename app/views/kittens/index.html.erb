@@ -12,6 +12,9 @@
               <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
               <p><i class="fas fa-cat"></i> <%= kitten.description%></p>
               <p><i class="fas fa-map-marker-alt"></i> <%= kitten.location %></p>
+              <%= link_to kitten_path(kitten), method: :delete, data: { confirm: "Are you sure?"} do %>
+              <i class="fa fa-trash destroy_dose"></i>
+              <% end %>
             </div>
         </div>
       <% end %>

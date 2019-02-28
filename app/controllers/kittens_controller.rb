@@ -43,7 +43,7 @@ class KittensController < ApplicationController
 
   def destroy
     @kitten.destroy
-    redirect_to kitten_path
+    redirect_to kittens_path
   end
 
   private
