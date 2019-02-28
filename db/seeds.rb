@@ -12,6 +12,7 @@ require 'faker'
  # Booking.destroy_all
 User.destroy_all
 
+
 puts 'Creating 12 fake users...'
 11.times do
   user = User.new(
