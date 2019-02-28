@@ -1,5 +1,6 @@
 class KittensController < ApplicationController
   before_action :find_kitten, only: [:show, :destroy, :edit, :update]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @kittens = Kitten.where.not(latitude: nil, longitude: nil)
