@@ -2,7 +2,15 @@ class KittensController < ApplicationController
   before_action :find_kitten, only: [:show, :destroy, :edit, :update]
 
   def index
-    @kittens = Kitten.all
+    @kittens = Kitten.where.not(latitude: nil, longitude: nil)
+    # @kittens = Kitten.all
+    @markers = @kittens.map do |kitten|
+      {
+        lng: kitten.longitude,
+        lat: kitten.latitude
+      }
+    end
+    # raise
   end
 
   def show

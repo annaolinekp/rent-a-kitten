@@ -37,7 +37,9 @@ kitten = Kitten.new(
   name: 'Galileo',
   description: 'Maine Coon kitty',
   location: 'London',
-  user: User.first
+  user: User.first,
+  latitude: 103,
+  longitude: 100
 )
 kitten.save!
 
