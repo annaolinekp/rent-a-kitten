@@ -25,6 +25,7 @@ class KittensController < ApplicationController
 
   def create
     @kitten = Kitten.create(kitten_params)
+    @kitten.user = current_user
     if @kitten.save
       redirect_to kitten_path(@kitten)
     else
@@ -48,7 +49,7 @@ class KittensController < ApplicationController
   private
 
   def kitten_params
-    params.require(:kitten).permit(:name, :description)
+    params.require(:kitten).permit(:name, :description, :photo, :location)
   end
 
   def find_kitten
