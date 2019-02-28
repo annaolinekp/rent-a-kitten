@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :find_user, only: [:show, :destroy, :edit, :update]
 
   def show
+    @review = Review.new
+    @booking = Booking.new
   end
 
   def new
