@@ -1,9 +1,9 @@
-<body>
+
   <div class="container padding-top">
     <div class="row">
       <div class="col-12 col-lg-8 p-3">
           <h1> Say 'meow' to <%=@kitten.name %></h1>
-          <%=cl_image_tag @kitten.photo, height: 200, width: 300, crop: :fill %>
+          <%=cl_image_tag @kitten.photo, height: 300, width: 200, crop: :fill %>
           <br>
           <br>
             <h3>About me: </h3> I'm a: <%=@kitten.description%>
@@ -24,11 +24,12 @@
             </div>
           </div>
             <br>
-            <%= render 'bookings/form' %>
-         </div>
-
+            <div class="sticky-booking"> <%= render 'bookings/form' %>
+              <p class="text-center"> you won't be charged yet </p>
+            </div>
+      </div>
     </div>
   </div>
-</body>
+
 
 
