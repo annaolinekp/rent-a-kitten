@@ -7,3 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+require 'faker'
+
+ # Booking.destroy_all
+User.destroy_all
+
+puts 'Creating 12 fake users...'
+11.times do
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "123456"
+
+  )
+  user.save!
+
+end
+
+puts 'Finished!'
