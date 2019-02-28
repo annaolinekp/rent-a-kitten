@@ -3,16 +3,14 @@
 </head>
 <body>
   <div class="main-container">
-    <h1><%= "#{User.name}" %></h1>
-  </div>
-
-
-  <div>
-    <% @user.bookings.each do |booking|%>
-      <%= booking.date %>
-      <%= booking.kitten.name %>
-      <%= booking.kitten.description %>
-      <%= render 'reviews/form', kitten: booking.kitten, review: Review.new %>
-    <% end %>
+    <h1><%= @user.first_name %></h1>
+    <div>
+      <% @user.bookings.each do |booking|%>
+        <%= booking.date %>
+        <%= booking.kitten.name %>
+        <%= booking.kitten.description %>
+        <%= render 'reviews/form', kitten: booking.kitten, review: Review.new %>
+      <% end %>
+    </div>
   </div>
 </body>
