@@ -1,3 +1,10 @@
-<% @bookings.each do |booking| %>
-  <%= booking.kitten.name %> is going to spend some quality time with <%= booking.user.first_name %>
-<% end %>
+<div class="main-container">
+  <h1>BOOKINGS</h1>
+  <% @bookings.each do |booking| %>
+    <h2><%= link_to booking.kitten.name, kitten_path(kitten) %></h2>
+    <p>is going to spend some quality time with you!</p>
+    <%= link_to booking_path(kitten), method: :delete, data: { confirm: "Are you sure?"} do %>
+    <i class="fa fa-trash destroy_dose"></i>
+    <% end %>
+  <% end %>
+</div>
