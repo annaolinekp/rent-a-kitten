@@ -1,7 +1,11 @@
 <div class="nav-purple sticky-top">
   <div class="logos">
-    <%= image_tag "logo1.png", class: "logo"%>
-    <p class="logo-letters">Rent-a-Kitten</p>
+    <div class="logo">
+    <%= link_to image_tag("logo1.png"), root_path %>
+    </div>
+    <div class="logo-letters">
+      <p>Rent-a-Kitten</p>
+    </div>
   </div>
   <div class="nav-items">
     <div>
@@ -14,8 +18,9 @@
        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "link-item"%>
     </div>
     <div>
-       <%= image_tag "avatar.jpg", class: "avatar" %>
+       <%= link_to image_tag("avatar.png"), user_path(current_user),  class: "avatar" %>
     </div>
+
   </div>
 </div>
 
