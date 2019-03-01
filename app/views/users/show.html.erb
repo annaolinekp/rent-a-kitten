@@ -3,21 +3,28 @@
 </head>
 <body>
   <div class="main-container">
-    <h1><%= @user.first_name %></h1>
-    <div>
-      <% @user.bookings.each do |booking|%>
-        <%= booking.date %>
-        <%= booking.kitten.name %>
-        <%= booking.kitten.description %>
-        <%= render 'reviews/form', kitten: booking.kitten, review: Review.new %>
-      <% end %>
+    <div class="row justify-content-center">
+      <h1><%= @user.first_name %></h1>
+      <div>
+        <% @user.bookings.each do |booking|%>
+            <div class="kitten-card">
+            <%= booking.kitten.name %> <%= booking.date %>
+            <%= cl_image_tag booking.kitten.photo, height: 200, width: 400 %>
+            <%= render 'reviews/form', kitten: booking.kitten, review: Review.new %>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div>
-      <% @user.kittens.each do |kitten|%>
-        <%= kitten.photo %>
-        <%= kitten.name %>
-        <%= kitten.description %>
-      <% end %>
+    <div class="row justify-content-center">
+      <div>
+        <% @user.kittens.each do |kitten|%>
+          <div class="kitten-card">
+            <%= cl_image_tag kitten.photo, height: 200, width: 400 %>
+            <%= kitten.name %>
+            <%= kitten.description %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </body>
