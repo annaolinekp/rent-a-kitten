@@ -3,10 +3,10 @@
 
 .card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
   grid-gap: 10px;
-  margin: 60px;
-  width: 100%;
+  // margin: 60px;
 }
 
 .kitten-card {
@@ -44,6 +44,7 @@ a {
   text-decoration: none;
 }
 
-// a:hover {
-//   color: #FF824D;
-// }
+#map {
+  position: sticky;
+  top: 0;
+}
