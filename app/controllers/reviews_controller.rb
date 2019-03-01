@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     # @review.new(review_params)
     @review.kitten = Kitten.find(params[:kitten_id])
     @review.user = current_user
-    @review.save ? (redirect_to kitten_path(@kitten)) : (render :new)
+    @review.save ? (redirect_to kitten_path(@review.kitten)) : (render :new)
   end
 
   private

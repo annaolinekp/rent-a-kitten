@@ -17,6 +17,7 @@ class KittensController < ApplicationController
   def show
     @booking = Booking.new
     @review = Review.new
+    @reviews = @kitten.reviews
   end
 
   def new

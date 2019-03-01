@@ -14,11 +14,12 @@
             <h5>Where to find me:</h5> <p> <%=@kitten.location %> </p>
             <br>
             <br>
+
+            <% @reviews.each do |review| %>
+              <p> <%= review.content %></p>
+            <% end %>
           </div>
         </div>
-
-
-
         <div class="form-container-height border" >
           <p class="text-center">Pick a date and book me:</p>
           <div class="flex-box-show">
@@ -30,10 +31,6 @@
             <%= render 'bookings/form' %>
           </div>
         </div>
-
       <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path%></p>
     </div>
   </div>
-
-
-
