@@ -1,19 +1,11 @@
-h1, h2, h3, {
- color:$light;
-}
+// h1, h2, h3, {
+//  color:$light;
+// }
 
 img {
  width:400px;
  border-radius:4px;
 
-}
-
-body {
- background-color:white;
-}
-
-.padding-top {
- padding-top:100px;
 }
 
 .border-show {
@@ -34,19 +26,16 @@ border-color:#ffa783;
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
-
-
 }
 
 .price-item{
-  // color:#ffa783;
   font-size: 50px;
 }
 
-.font-size {
-  font-size: 10px;
-  color:black;
-}
+// .font-size {
+//   font-size: 10px;
+//   color:black;
+// }
 
 .review-box-margin{
   margin-top:150px;

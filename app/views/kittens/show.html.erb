@@ -1,22 +1,25 @@
+<body>
+  <div class="kitten-main-container" >
+    <div class="d-flex flex-column">
+        <h1> Say 'meow' to <%=@kitten.name %></h1>
+        <div class="kitten-show-container">
+        <div class="kitten-card-lg">
+          <div>
+            <%=cl_image_tag @kitten.photo, height: 300, width: 400, crop: :fill , class: "card-img"%>
+          </div>
+          <div>
+            <h5>About me: </h5> <p> I'm a: <%=@kitten.description%> </p>
+            <br>
+            <br>
+            <h5>Where to find me:</h5> <p> <%=@kitten.location %> </p>
+            <br>
+            <br>
+          </div>
+        </div>
 
-  <div class="container padding-top">
-    <div class="row">
-      <div class="col-12 col-lg-8 p-3">
-          <h1> Say 'meow' to <%=@kitten.name %></h1>
-          <%=cl_image_tag @kitten.photo, height: 300, width: 200, crop: :fill %>
-          <br>
-          <br>
-            <h3>About me: </h3> I'm a: <%=@kitten.description%>
-          <br>
-          <br>
-            <h4>Where to find me:</h4> <%=@kitten.location %>
-          <br>
-          <br>
-            <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path%></p>
-      </div>
 
 
-        <div class="col-12 col-lg-4 form-container-height border" style="margin-top:70px">
+        <div class="form-container-height border" >
           <p class="text-center">Pick a date and book me:</p>
           <div class="flex-box-show">
             <div class="price-item d-flex align-items-end">
@@ -24,10 +27,11 @@
             </div>
           </div>
             <br>
-            <div class="sticky-booking"> <%= render 'bookings/form' %>
-              <p class="text-center"> you won't be charged yet </p>
-            </div>
-      </div>
+            <%= render 'bookings/form' %>
+          </div>
+        </div>
+
+      <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path%></p>
     </div>
   </div>
 

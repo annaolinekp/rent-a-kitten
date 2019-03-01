@@ -4,11 +4,14 @@
     margin-top: 20px;
     font-size: 24px;
     font-weight: lighter;
-    color: $light;
+    color: $main-color;
   }
 }
 
 .link-kitten {
-  color: $dark;
+  color: $main-color;
   margin: 24px, 50px;
+   &:hover{
+    color: $light;
+   }
 }
