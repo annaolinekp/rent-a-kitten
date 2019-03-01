@@ -12,5 +12,12 @@
         <%= render 'reviews/form', kitten: booking.kitten, review: Review.new %>
       <% end %>
     </div>
+    <div>
+      <% @user.kittens.each do |kitten|%>
+        <%= kitten.photo %>
+        <%= kitten.name %>
+        <%= kitten.description %>
+      <% end %>
+    </div>
   </div>
 </body>
