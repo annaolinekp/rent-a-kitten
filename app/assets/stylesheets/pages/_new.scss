@@ -1,0 +1,10 @@
+.main-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
