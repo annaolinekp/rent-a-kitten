@@ -1,22 +1,22 @@
 <div class="kitten-main-container">
+
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8 col-md-10">
-      <h1>Share your kitten</h1>
-         <div class="polaroid-images">
-            <a href="" title="Misty"><img height="200" src="images/water.jpg" alt="Misty" title="Misty" /></a>
-            <a href="" title="Ella"><img height="200" src="images/water2.jpg" alt="Ella" title="Ella" /></a>
-            <a href="" title="Caleb"><img height="200" src="images/water3.jpg" alt="Caleb" title="Caleb" /></a>
-            <a href="" title="Tiger"><img height="200" src="images/water4.jpg" alt="Tiger" title="Tiger" /></a>
-        </div>
+      <h1>Share your kitten - fill in form blah blah </h1>
+      <div class="polaroid-images">
+        <a href="" title="Misty"><img height="200" src="https://images.unsplash.com/photo-1542736143-29a8432162bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Misty" title="Misty" /></a>
+        <a href="" title="Ella"><img height="200" src="https://images.unsplash.com/photo-1535464053056-cc294d1c5946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Ella" title="Ella" /></a>
+        <a href="" title="Caleb"><img height="200" src="https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Caleb" title="Caleb" /></a>
+        <a href="" title="Tiger"><img height="200" src="https://images.unsplash.com/photo-1503386435953-66943ba30817?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Tiger" title="Tiger" /></a>
+        <a href="" title="Blake"><img height="200" src="https://images.unsplash.com/photo-1548403120-f0750c1ecd50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Blake" title="Blake" /></a>
+      </div>
     </div>
 
 
 
-
-
     <div class="col-12 col-lg-4 col-md-2">
-      <div class="form-container-height">
-        <%= render 'form', kitten: @kitten %>
+      <div class="form-container-height form-fixed">
+        <p><%= render 'form', kitten: @kitten %></p>
         <p class="text-right"><%= link_to 'Back', user_session_path %></p>
       </div>
     </div>
