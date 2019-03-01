@@ -40,3 +40,27 @@ align-items: flex-end;
 .review-box-margin{
   margin-top:150px;
 }
+
+
+.btn-light-orange-show {
+  background-color: $light;
+  &:hover {
+     text-decoration: none;
+  }
+}
+
+.button-show {
+  padding: 16px 24px;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  width: 260px;
+}
+
+.sticky-booking{
+
+  position: sticky;
+  top: 6px;
+}
