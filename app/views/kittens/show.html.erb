@@ -5,7 +5,7 @@
         <div class="kitten-show-container">
         <div class="kitten-card-lg">
           <div>
-            <%=cl_image_tag @kitten.photo, height: 300, width: 400, crop: :fill , class: "card-img"%>
+            <%=cl_image_tag @kitten.photo, height: 300, dpr: 3.0, width: 400, crop: :fill , class: "card-img"%>
           </div>
           <div>
             <h5>About me: </h5> <p> I'm a: <%=@kitten.description%> </p>
@@ -31,6 +31,6 @@
             <%= render 'bookings/form' %>
           </div>
         </div>
-      <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path%></p>
+      <p> <class= center-text><%= link_to "Go back to see all my friends", kittens_path, class: "link-style"%></p>
     </div>
   </div>

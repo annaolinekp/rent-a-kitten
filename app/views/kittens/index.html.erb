@@ -6,9 +6,9 @@
     <div class="card-container">
       <% @kittens.each do |kitten| %>
         <div class="kitten-card">
-          <%= cl_image_tag kitten.photo, height: 200, width: 400, crop: :fill %>
+          <%= cl_image_tag kitten.photo, height: 200, width: 400, dpr: 3.0, crop: :fill %>
             <div class="kitten-info-card">
-              <h2><%= link_to kitten.name, kitten_path(kitten)%></h2>
+              <h2><%= link_to kitten.name, kitten_path(kitten), class: "link-style"%></h2>
               <div class="inner-info">
                 <div class= "d-flex kitten-description">
                   <i class="fas fa-cat"></i>
