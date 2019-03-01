@@ -19,6 +19,29 @@
   border-radius: 4px;
 }
 
+.kitten-card-user {
+  // display: inline-block;
+  // vertical-align: top;
+  width: 400px;
+  height: 250px;
+  margin: 20px;
+  box-shadow: 4px 2px 41px -9px rgba(171,168,171,0.86);
+  border-radius: 4px;
+}
+
+.review-card {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  box-shadow: 4px 2px 41px -9px rgba(171,168,171,0.86);
+  border-radius: 4px;
+}
+
+.review-card h2 {
+  font-size: 16px;
+  text-align: center;
+}
+
 .kitten-info-card {
   padding: 5px;
   // text-align: center;
@@ -57,6 +80,13 @@ a {
   padding-bottom: 10px;
 }
 
+.your-kittens-container {
+  text-align: center;
+}
+
+.your-bookings {
+  text-align: center;
+}
 // .kitten-description {
 //   white-space: nowrap;
 //   overflow: hidden;
