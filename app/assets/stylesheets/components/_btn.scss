@@ -1,8 +1,9 @@
-
+// this button is purple
 .btn-light-orange {
   background-color: $light;
   &:hover {
      text-decoration: none;
+      color: $main-color;
   }
 }
 
