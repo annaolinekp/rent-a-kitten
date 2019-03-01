@@ -21,7 +21,10 @@
 
 .kitten-info-card {
   padding: 5px;
-  text-align: center;
+  // text-align: center;
+   p {
+     margin-left: 5px;
+   }
 }
 
 .kitten-info-card p {
@@ -49,3 +52,13 @@ a {
   position: sticky;
   top: 0;
 }
+.inner-info {
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+
+// .kitten-description {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: scroll;
+// }
