@@ -14,17 +14,18 @@
             <h5>Where to find me:</h5> <p> <%=@kitten.location %> </p>
             <br>
             <br>
+            <h5>Kitten Lover Reviews:</h5>
 
             <% @reviews.each do |review| %>
-              <p> <%= review.content %></p>
+              <p><i class="fas fa-paw p-2"></i><%= review.content %></p>
             <% end %>
           </div>
         </div>
         <div class="form-container-height border" >
-          <p class="text-center">Pick a date and book me:</p>
+          <p class="text-center"style="font-size:20px">Pick a date and book me:</p>
           <div class="flex-box-show">
             <div class="price-item d-flex align-items-end">
-              <p>£5</p> <p style="font-size:12px; margin-left:10px">per day</p>
+
             </div>
           </div>
             <br>
