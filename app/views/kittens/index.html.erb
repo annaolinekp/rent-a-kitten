@@ -1,15 +1,14 @@
 <!-- <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-</head>
-<body> -->
+</head> -->
   <div class="main-container">
-    <h1>PICK A KITTEN</h1>
+    <!-- <h1>PICK A KITTEN</h1> -->
     <div class="card-container">
       <% @kittens.each do |kitten| %>
         <div class="kitten-card">
-          <%= cl_image_tag kitten.photo %>
+          <%= cl_image_tag kitten.photo, height: 200, width: 400, crop: :fill %>
             <div class="kitten-info-card">
-              <h2><%= link_to kitten.name, kitten_path(kitten) %></h2>
+              <h2><%= link_to kitten.name, kitten_path(kitten)%></h2>
               <p><i class="fas fa-cat"></i> <%= kitten.description%></p>
               <p><i class="fas fa-map-marker-alt"></i> <%= kitten.location %></p>
               <%= link_to kitten_path(kitten), method: :delete, data: { confirm: "Are you sure?"} do %>
@@ -23,13 +22,11 @@
 
     <div
       id="map"
-      style="width: 300px;
-      height: 400px;"
+      style="width: 50%;
+      height: 100vh;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     >
-
     </div>
 
   </div>
-<!-- </body> -->
